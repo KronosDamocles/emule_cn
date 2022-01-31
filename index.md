@@ -67,6 +67,7 @@ Low ID 请看 [获得HighID](./hiid.md)
 ## 交流平台
 
 [即时消息](./im.md)
+
 [文档发布](https://telegra.ph/emule-cn-03-30)
 
 ## P2P 共享简介
@@ -76,6 +77,6 @@ Low ID 请看 [获得HighID](./hiid.md)
 
 
 [eMule]: https://emule-project.net/home/perl/general.cgi?l=42
-[BT]: https://bittorrent.org/
+[BT]: https://www.bittorrent.org/
 [Aria2]: https://aria2.github.io/
 [Rclone]: https://rclone.org/
