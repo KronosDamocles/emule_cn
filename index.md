@@ -8,10 +8,10 @@
 
 社区致力于但不限于以下自由软件的推广：
 
-[eMule][]  
-[BitTorrent][BT]  
-[Aria2][]  
-[Rclone][]  
+- [eMule][]
+- [BitTorrent][BT]
+- [Aria2][]
+- [Rclone][]
 
 ## 软件工具
 
@@ -37,7 +37,7 @@ https://github.com/irwir/eMule/releases/
 
 Low ID 请看 [获得HighID](./hiid.md)
 
-[config目录的位置](./conf.md)
+[config目录在哪](./conf.md)
 
 [电骡和电驴的区别](./diff.md)
 
@@ -68,13 +68,11 @@ Low ID 请看 [获得HighID](./hiid.md)
 
 [即时消息](./im.md)
 
-[文档发布](https://telegra.ph/emule-cn-03-30)
+[文档发布](./pub.md)
 
 ## P2P 共享简介
 
-简述P2P共享的概念，发展的几个阶段，基本原理： [P2P 共享简介](./p2p.md)
-
-
+简述P2P共享的概念，发展的几个阶段，基本原理： [P2P共享简介](./p2p.md)
 
 [eMule]: https://emule-project.net/home/perl/general.cgi?l=42
 [BT]: https://www.bittorrent.org/
