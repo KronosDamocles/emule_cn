@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = '电骡社区文档'
-copyright = 'CC BY-SA 4.0'
+copyright = 'CC BY 4.0'
 author = 'Kronos Damocles'
 
 

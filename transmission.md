@@ -1,4 +1,4 @@
-# Debian云主机跑Transmission
+# Debian命令行跑Transmission
 
 以下所有命令都以普通用户身份运行。若不会设置sudoers，也可以用root运行，但是不推荐。
 

@@ -23,7 +23,7 @@
 官方网站的中文帮助文档已经相当详细，是学习电骡的必修基础课。
 
 官方最新社区版客户端：  
-https://github.com/irwir/eMule/releases/
+[https://github.com/irwir/eMule/releases/][1]
 
 如需要反吸血功能请自己找各种第三方修改版（MOD），比如 [eMule CN版](https://www.emule-secret.com/)
 
@@ -55,7 +55,7 @@ Low ID 请看 [获得HighID](./hiid.md)
 
 [快速共享](./btshare.md)
 
-[Debian云主机跑BT](./transmission.md)
+[Debian命令行跑BT](./transmission.md)
 
 [BT杂谈](./misc.md)
 
@@ -78,3 +78,4 @@ Low ID 请看 [获得HighID](./hiid.md)
 [BT]: https://www.bittorrent.org/
 [Aria2]: https://aria2.github.io/
 [Rclone]: https://rclone.org/
+[1]: https://github.com/irwir/eMule/releases/

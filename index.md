@@ -3,12 +3,15 @@
 
 ```{toctree}
 :maxdepth: 2
-:caption: Contents
 
 home
-amule <amule>
-transmission <transmission>
-others
+conn
+kad
+hiid
+命令行跑amule <amule>
+命令行跑BT <transmission>
+其它工具 <others>
+p2p
 ```
 
 
