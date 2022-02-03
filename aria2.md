@@ -24,7 +24,7 @@ Aria2在默认设置下运行时，会启动下载并在完成后退出。Aria2�
 
     vi /home/<用户名>/.aria2/aria2.conf
 
-内容是如下：
+内容如下：
 
     #下载文件夹
     dir=/home/<用户名>/aria2

@@ -123,3 +123,6 @@
 
 把磁力链接发给朋友即可。
 
+Transmission官方网站: [https://transmissionbt.com/][1]
+
+[1]: https://transmissionbt.com/
