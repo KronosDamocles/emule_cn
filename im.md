@@ -11,12 +11,18 @@
 
 电骡社区 将以 Matrix、IRC 和 XMPP 作为后备交流工具。使用方法请自行学习。
 
-Matrix 群组： `#emule_cn:matrix.org`
+Matrix 群组： `#eMule_cn:matrix.org`
 
 IRC 频道： `#emule_cn` 服务地址 `irc.libera.chat` 端口 `6667` TLS端口 `6697`
 
 XMPP 群组： `emule_cn@muc.xmpp.chat`
 
-其中 Matrix 群组和 IRC 频道已用 Matrix 官方网桥桥接，完全互通。注意IRC会暴露自己的IP地址，请勿直连登陆。
+其中 Matrix 群组和 IRC 频道使用 Matrix 官方网桥桥接；
+电报群和 Matrix 群组由 [t2bot.io][2] 网站提供的桥接服务连通。
+
+注意：
+- IRC会暴露自己的IP地址，请勿直连登陆；
+- Matrix 群组名称区分大小写。
 
 [1]: https://eylenburg.github.io/im_comparison.htm
+[2]: https://t2bot.io/telegram/
