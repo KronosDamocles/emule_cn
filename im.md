@@ -17,7 +17,7 @@ IRC 频道： `#emule_cn` 服务地址 `irc.libera.chat` 端口 `6667` TLS端口
 
 XMPP 群组： `emule_cn@muc.xmpp.chat`
 
-其中 Matrix 群组和 IRC 频道使用 Matrix 官方网桥桥接；
+~~其中 Matrix 群组和 IRC 频道使用 Matrix 官方网桥桥接；~~ ([网桥已死][3])
 电报群和 Matrix 群组由 [t2bot.io][2] 网站提供的桥接服务连通。
 
 注意：
@@ -26,3 +26,4 @@ XMPP 群组： `emule_cn@muc.xmpp.chat`
 
 [1]: https://eylenburg.github.io/im_comparison.htm
 [2]: https://t2bot.io/telegram/
+[3]: https://libera.chat/news/official-matrix-bridge-farewell
