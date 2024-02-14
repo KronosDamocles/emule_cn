@@ -51,3 +51,9 @@ html_theme = 'alabaster'
 html_static_path = ['_static']
 
 language = 'zh_CN'
+
+# To support strike through "~~" markdown in myst-parser: 
+myst_enable_extensions = [
+    "strikethrough",
+]
+suppress_warnings = ["myst.strikethrough"]
