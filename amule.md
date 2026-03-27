@@ -7,6 +7,7 @@
 - 安装
 - 配置
 - 运行
+- 重启
 
 ## 前言 
 
@@ -28,7 +29,12 @@
 ## 配置 
 
 建议用普通账户运行amule. 除非有说明，下文中的命令都是用这个普通账户执行的，需要替换的文字用尖括号标注<>。
-先创建两个目录：
+
+先停掉amuled系统服务：
+
+    systemctl stop amule-daemon
+
+然后创建两个目录：
 
     mkdir -p ~/amule/incoming
     mkdir -p ~/amule/temp
@@ -37,24 +43,23 @@
 
     amuled
 
-运行会报错退出，但是默认配置会生成在这个目录里： `~/.aMule`
+运行会报错退出，但是默认配置会生成在这个目录里： `~/.aMule`.  
 进入 .aMule 目录：
 
     cd ~/.aMule
 
 下载最新服务器和kad节点文件到当前目录里：
 
-    wget "http://upd.emule-security.org/server.met"
-    wget "http://upd.emule-security.org/nodes.dat"
+    wget -O server.met "http://upd.emule-security.org/server.met"
+    wget -O nodes.dat "http://upd.emule-security.org/nodes.dat"
 
 生成密码的md5值：
 
-    echo -n "<任意密码>" | md5sum -
+    echo -n "<任意密码>" | md5sum | cut -d ' ' -f 1
 
 输出结果类似于：
-`d30d85deadf34dcb3745c594e1b809b8  -`
-
-短横线前面那段就是密码的md5值，记下来备用。至于命令中用什么密码都无所谓，后面不会用到。 
+`d30d85deadf34dcb3745c594e1b809b8`  
+记下来备用。至于命令中用什么密码都无所谓，后面不会用到。 
 下面修改amuled的配置文件 amule.conf 。不会命令行编辑的可以在本地修改好再上传。
 以下三项是必须修改的设置：
 
@@ -105,7 +110,7 @@
 
 ## 运行 
 
-用root权限运行：
+用**root**权限运行：
 启动amuled后台服务：
 
     systemctl start amule-daemon
@@ -123,7 +128,7 @@
     systemctl restart amule-daemon
 
 amule-daemon服务会随系统自动启动。 
-用普通账户运行amulecmd来操作amuled:
+用**普通账户**运行amulecmd来操作amuled:
 
     amulecmd
 
@@ -139,8 +144,62 @@ amule-daemon服务会随系统自动启动。
 
 具体用法自行查阅： `help <命令>`
 
+## 重启
+
+amuled一直存在内存占用逐渐升高的问题，怀疑有内存泄漏。
+在小容量的云主机上长时间跑amuled会发生进程被容器或系统杀掉的情况。
+一个简单的解决方法是用一个定时任务每天/周自动重启amuled.
+下面介绍利用 systemd 的定时任务自动重启amuled的设置方法。
+
+创建一个文本文件 `/usr/local/bin/amuled-recycle`:
+
+    #!/bin/sh
+    # Recycling amule-daemon.service only if it is running
+    systemctl --quiet is-active amule-daemon.service \
+    && systemctl restart amule-daemon.service
+    true
+
+修改权限为可执行脚本：
+
+    chmod 755 /usr/local/bin/amuled-recycle
+
+创建一个服务描述文件 `/usr/local/lib/systemd/system/amuled-recycle.service`:
+
+    [Unit]
+    Description=Recycling aMule Daemon
+    After=network-online.target
+    [Service]
+    Type=oneshot
+    ExecStart=/usr/local/bin/amuled-recycle
+
+创建一个定时器描述文件 `/usr/local/lib/systemd/system/amuled-recycle.timer`:
+
+    [Unit]
+    Description=Daily Recycling amuled
+    [Timer]
+    OnCalendar=*-*-* 05:00:00
+    [Install]
+    WantedBy=timers.target
+
+上文中的 `OnCalendar` 项设置定时触发的时间，文中为每日5点，可自行修改。例如 `OnCalendar=weekly`.
+详细语法请查阅 [systemd.time](https://www.freedesktop.org/software/systemd/man/latest/systemd.time.html) 的文档。
+
+执行以下命令安装和启动定时器：
+
+    systemctl daemon-reload
+    systemctl enable amuled-recycle.timer
+    systemctl start amuled-recycle.timer
+
+查阅定时器状态及触发时间：
+
+    systemctl status amuled-recycle.timer
+
+当然，传统的 Unix cron 也可以实现定时任务，就不介绍了。
+
 ------------------------------------------------------------------------
 
 结束
 
 2020年1月
+
+更新于 2026年3月

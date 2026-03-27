@@ -12,12 +12,12 @@
 
     sudo systemctl stop transmission-daemon
 
-用root身份修改 `/lib/systemd/system/transmission-daemon.service` 文件：
+用root身份创建文件 `/usr/local/lib/systemd/system/transmission-daemon.service.d/80-bt.conf`，内容为：
 
-    #将user配置改成自己的用户名
+    [Service]
     user=<用户名>
 
-保存后，刷新配置：
+将`<用户名>`替换成你实际的用户名。保存后，刷新配置：
 
     sudo systemctl daemon-reload
 
@@ -124,5 +124,8 @@
 把磁力链接发给朋友即可。
 
 Transmission官方网站: [https://transmissionbt.com/][1]
+
+---
+更新于 2026年3月
 
 [1]: https://transmissionbt.com/

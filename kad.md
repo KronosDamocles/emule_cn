@@ -10,8 +10,6 @@
 
 3. 手工填入一个 Kad 节点的 IP 地址和端口。可以到社区讨论群里索要。注意该节点必须是 HighID。
 
-一篇更详细的教程： [https://emule.ironward.org/conn.html][3]
 
 [1]: ed2k://|nodeslist|http://upd.emule-security.org/nodes.dat|/
 [2]: http://upd.emule-security.org/nodes.dat
-[3]: https://emule.ironward.org/conn.html
