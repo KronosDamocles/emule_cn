@@ -204,9 +204,9 @@ OpenWrt从25.12版本起改用 [apk](https://wiki.alpinelinux.org/wiki/Alpine_Pa
     #是否连接服务器。我通常关掉
     ConnectToED2K=1
     #临时文件夹，前面创建过
-    TempDir=/home/<账户名>/amule/temp
+    TempDir=/opt/home/janedoe/amule/temp
     #下载完成后移入文件夹
-    IncomingDir=/home/<账户名>/amule/incoming
+    IncomingDir=/opt/home/janedoe/amule/incoming
     #下面是amuleweb的配置
     [WebServer]
     #是否开启网页操控功能
