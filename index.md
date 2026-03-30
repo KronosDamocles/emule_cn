@@ -13,6 +13,7 @@ diff
 ipv6
 命令行跑amule <amule>
 amuleweb
+owmule
 btshare
 命令行跑BT <transmission>
 misc

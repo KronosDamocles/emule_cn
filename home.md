@@ -49,7 +49,7 @@ Low ID 请看 [获得HighID](./hiid.md)
 
 [远程访问amuleweb](./amuleweb.md)
 
-[OpenWRT跑电骡教程](https://telegra.ph/%E5%9C%A8-OpenWRT-%E4%B8%8A%E4%BD%BF%E7%94%A8-aMule-04-01)
+[OpenWrt跑电骡](./owmule.md)
 
 ### BitTorrent
 
