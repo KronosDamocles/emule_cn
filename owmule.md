@@ -306,7 +306,7 @@ amuled一直存在内存占用逐渐升高的问题，怀疑有内存泄漏。
 一个简单的解决方法是用一个定时任务每天/周自动重启amuled.
 下面介绍利用 cron 的定时任务自动重启amuled的设置方法。
 
-创建一个文本文件 `/opt/usr/bin/amuled-recycle`, 内容如下。
+创建一个文本文件 `/opt/bin/amuled-recycle`, 内容如下。
 这段脚本的意思是，若电骡在运行则重启它。
 
     #!/bin/sh
@@ -317,7 +317,7 @@ amuled一直存在内存占用逐渐升高的问题，怀疑有内存泄漏。
 
 修改权限为可执行文件：
 
-    chmod 755 /opt/usr/bin/amuled-recycle
+    chmod 755 /opt/bin/amuled-recycle
 
 设置 `crontab` 在每天5点执行上面的脚本:
 
@@ -325,7 +325,7 @@ amuled一直存在内存占用逐渐升高的问题，怀疑有内存泄漏。
 
 在编辑界面输入以下一行内容，然后保存退出。
 
-    0 5 * * * /opt/usr/bin/amuled-recycle
+    0 5 * * * /opt/bin/amuled-recycle
 
 以上即是设置每天5点重启电骡。若只在每周日5点重启，请将上面第三颗 `*` 改成 `0`.
 其它定时设定请查阅 [crontab说明文档](https://pubs.opengroup.org/onlinepubs/007904975/utilities/crontab.html).
