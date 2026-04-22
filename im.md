@@ -9,7 +9,7 @@
 
 关于各个主流即时消息工具的比较，推荐参考： [https://eylenburg.github.io/im_comparison.htm][1]
 
-电骡社区 将以 Matrix、IRC 和 XMPP 作为后备交流工具。使用方法请自行学习。
+电骡社区 将以 Matrix、IRC、XMPP 和 simplex-chat 作为后备交流工具。使用方法请自行学习。
 
 Matrix 群组： `#eMule_cn:matrix.org`
 
@@ -19,6 +19,8 @@ XMPP 群组： `emule_cn@muc.xmpp.chat`
 
 ~~其中 Matrix 群组和 IRC 频道使用 Matrix 官方网桥桥接；~~ ([网桥已死][3])
 电报群和 Matrix 群组由 [t2bot.io][2] 网站提供的桥接服务连通。
+
+Simplex-chat: [入群链接](https://smp4.simplexonflux.com/g#4_YZ_80prn2lAU9lpU5ywVxchKcI58iQt7jC52T7KgE)
 
 注意：
 - IRC会暴露自己的IP地址，请勿直连登陆；

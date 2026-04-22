@@ -4,6 +4,7 @@
 
 - telegra.ph: [https://telegra.ph/emule-cn-03-30](https://telegra.ph/emule-cn-03-30) (已停止更新)
 - readthedocs.org: [https://emule-cn.rtfd.io](https://emule-cn.readthedocs.io)
+- 暗网: [链接](http://gxxrw4wado6hiac2lhuy4fcxfu2ycvjbiahcxkwfniaodqelrwvwelid.onion)
 
 文档项目托管于 github: [https://github.com/KronosDamocles/emule_cn](https://github.com/KronosDamocles/emule_cn)
 
